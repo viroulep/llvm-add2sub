@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+@LLVM_TOOLS_BINARY_DIR@/opt -load-pass-plugin @CMAKE_CURRENT_BINARY_DIR@/RegisterAdd2Sub.so "$@"
