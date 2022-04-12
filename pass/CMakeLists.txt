@@ -1,2 +1,2 @@
-add_llvm_pass_plugin(RegisterAdd2Sub add2sub.cpp)
-configure_file(opt_add2sub.in ${CMAKE_BINARY_DIR}/opt_add2sub @ONLY)
+add_llvm_pass_plugin(RegisterMyPlugin mba.cpp add2sub.cpp register.cpp)
+configure_file(opt_with_plugin.in ${CMAKE_BINARY_DIR}/opt_with_plugin @ONLY)
