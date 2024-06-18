@@ -9,7 +9,7 @@ TODO: add a link to the aforementioned talk
 
 ## Build
 
-Requires LLVM 13, if you are using an apt-based distribution I recommend
+Requires LLVM 15, if you are using an apt-based distribution I recommend
 following the instruction on LLVM's [dedicated page](https://apt.llvm.org/).
 
 If your installation isn't in a standard path, set `LLVM_DIR` to llvm's cmake integration:

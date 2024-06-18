@@ -1,4 +1,5 @@
 #include "llvm/IR/IRBuilder.h"
+#include "llvm/IR/InstIterator.h"
 #include "llvm/Passes/PassBuilder.h"
 #include "llvm/Passes/PassPlugin.h"
 
@@ -28,7 +29,7 @@ struct AddToSub : PassInfoMixin<AddToSub> {
 void RegisterPassBuilderCallbacks(PassBuilder &PB) {
   // The callback will run at the very beginning of an optimization pipeline.
   PB.registerPipelineStartEPCallback(
-      [](ModulePassManager &MPM, PassBuilder::OptimizationLevel OL) {
+      [](ModulePassManager &MPM, OptimizationLevel OL) {
         // Use a Module -> Function adaptor
         // It's just for the sake of the example, we could register a callback
         // using a FunctionPassManager!

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.13)
 
 project(llvm_add2sub)
 
-find_package(LLVM 13.0 REQUIRED CONFIG)
+find_package(LLVM 15 REQUIRED CONFIG)
 
 list(APPEND CMAKE_MODULE_PATH "${LLVM_CMAKE_DIR}")
 include(AddLLVM)
